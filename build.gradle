@@ -1,8 +1,8 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
-group = 'org.example'
+group = 'come.example'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,8 +10,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 test {
